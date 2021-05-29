@@ -17,7 +17,7 @@ class Generator:
         """
         raw_ean = ean
         my_ean = barcode.get('ean13', raw_ean, writer=ImageWriter())
-        my_ean.save(f"{ean}")
+        my_ean.save(f"Files/{ean}")
 
     def pdf_ety(self, art1, art2, promotion):#####
         """
@@ -43,7 +43,7 @@ class Generator:
         pdf.cell(w=0, h=20, txt=promotion, border=0, align="C", ln=1)
 
         # Insert a barcode.
-        pdf.image(f"{art1.ean}.png", w=200, h=60)
+        pdf.image(f"Files/{art1.ean}.png", w=200, h=60)
 
         # !!Insert Margin!!
         pdf.set_font(family="DejaVu", size=20)
@@ -66,9 +66,8 @@ class Generator:
         pdf.cell(w=0, h=20, txt=promotion, border=0, align="C", ln=1)
 
         # Insert a barcode.
-        pdf.image(f"{art2.ean}.png", w=200, h=60)
+        pdf.image(f"Files/{art2.ean}.png", w=200, h=60)
 
         # Generate file.
-        pdf.output(self.filename)
-        webbrowser.open(self.filename)
-        
+        pdf.output(f"Files/{self.filename}")
+        #webbrowser.open(f"Files/{self.filename}") -this is no longer needed since shareing?

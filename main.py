@@ -8,16 +8,16 @@ today = date.today()
 
 # Get input from a user. Hardcoded values just  for test.
 # Article 1.
-art_1_name = "NZ SKUWACZ D/LODU TRZON"  # input("1st article's name: ")
-art_1_ean = "5906083358784"  # input("1st article's ean code: ")
-art_1_price = "29,99"  # input("1st article's unit price: ")
+art_1_name = input("1st article's name: ")  # "NZ SKUWACZ D/LODU TRZON"
+art_1_ean =  input("1st article's ean code: ")  # "5906083358784"
+art_1_price = input("1st article's unit price: ")  # "29,99"
 
 # Article 2.
-art_2_name = "SZCZOT DRUCIANA 3RZEDOWA"  # input("2nd article's name: ")
-art_2_ean = "5906083069307"  # input("2nd article's ean code: ")
-art_2_price = "19,99"  # input("1st article's unit price: ")
+art_2_name = input("2nd article's name: ")  # "SZCZOT DRUCIANA 3RZEDOWA"
+art_2_ean = input("2nd article's ean code: ")  # "5906083069307
+art_2_price = input("1st article's unit price: ")  # "19,99" 
 
-promotion_title = "WYPRZEDAŻ"  # input("Promotion: ").upper()
+promotion_title = input("Promotion: ").upper()  # "WYPRZEDAŻ" 
 
 # Generate Data for a file.
 new_article = Article(name = art_1_name, ean = art_1_ean, cena = art_1_price)
